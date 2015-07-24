@@ -1,5 +1,5 @@
-import "package:tiles/tiles.dart" as react;
-import "package:tiles/tiles_browser.dart" as react;
+import "package:squares/squares.dart" as react;
+import "package:squares/squares_browser.dart" as react;
 //import "dart:html";
 //import "dart:async";
 import "package:logging/logging.dart";
@@ -46,7 +46,7 @@ var Span = react.registerComponent(({props, children}) => new _Span(props, child
 
 class _Hello extends react.Component {
 
-  _Hello([props, children]): super(props, children);
+  _Hello([props, children]): super.withParams(props, children);
 
   render() {
     timeprint("rendering start");

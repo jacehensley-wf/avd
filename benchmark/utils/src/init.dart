@@ -8,12 +8,12 @@ initGlobal() {
 initTiles() {
   _USED = _TILES;
   initGlobal();
-  tiles.initTilesBrowserConfiguration();
+  squares.initTilesBrowserConfiguration();
 
   createVirtualDOM = (dynamic what, dynamic where) {
     tilesBenchmark.start(Benchmark.VIRTUALDOMBUILDING);
     tilesBenchmark.start(Benchmark.ALLRENDERED);
-    tiles.Node node = new tiles.Node.fromDescription(null, what);
+    squares.Node node = new squares.Node.fromDescription(null, what);
     node.update();
     tilesBenchmark.stop(Benchmark.VIRTUALDOMBUILDING);
   };
@@ -21,146 +21,146 @@ initTiles() {
   mountComponent = (dynamic what, dynamic where) {
     tilesBenchmark.start(Benchmark.MOUNTING);
     tilesBenchmark.start(Benchmark.ALLRENDERED);
-    tiles.mountComponent(what, where);
+    squares.mountComponent(what, where);
     tilesBenchmark.stop(Benchmark.MOUNTING);
   };
 
-  registerComponent = tiles.registerComponent;
+  registerComponent = squares.registerComponent;
 
   benchmark = tilesBenchmark;
 
-  a = tiles.a;
-  abbr = tiles.abbr;
-  address = tiles.address;
-  article = tiles.article;
-  aside = tiles.aside;
-  audio = tiles.audio;
-  b = tiles.b;
-  bdi = tiles.bdi;
-  bdo = tiles.bdo;
-  big = tiles.big;
-  blockquote = tiles.blockquote;
-  body = tiles.body;
-  button = tiles.button;
-  canvas = tiles.canvas;
-  caption = tiles.caption;
-  cite = tiles.cite;
-  code = tiles.code;
-  colgroup = tiles.colgroup;
-  data = tiles.data;
-  datalist = tiles.datalist;
-  dd = tiles.dd;
-  del = tiles.del;
-  details = tiles.details;
-  dfn = tiles.dfn;
-  div = tiles.div;
-  dl = tiles.dl;
-  dt = tiles.dt;
-  em = tiles.em;
-  fieldset = tiles.fieldset;
-  figcaption = tiles.figcaption;
-  figure = tiles.figure;
-  footer = tiles.footer;
-  form = tiles.form;
-  h1 = tiles.h1;
-  h2 = tiles.h2;
-  h3 = tiles.h3;
-  h4 = tiles.h4;
-  h5 = tiles.h5;
-  h6 = tiles.h6;
-  head = tiles.head;
-  header = tiles.header;
-  html = tiles.html;
-  i = tiles.i;
-  iframe = tiles.iframe;
-  ins = tiles.ins;
-  kbd = tiles.kbd;
-  label = tiles.label;
-  legend = tiles.legend;
-  li = tiles.li;
-  main = tiles.main;
-  map = tiles.map;
-  mark = tiles.mark;
-  menu = tiles.menu;
-  menuitem = tiles.menuitem;
-  meter = tiles.meter;
-  nav = tiles.nav;
-  noscript = tiles.noscript;
-  object = tiles.object;
-  ol = tiles.ol;
-  optgroup = tiles.optgroup;
-  option = tiles.option;
-  output = tiles.output;
-  p = tiles.p;
-  pre = tiles.pre;
-  progress = tiles.progress;
-  q = tiles.q;
-  rp = tiles.rp;
-  rt = tiles.rt;
-  ruby = tiles.ruby;
-  s = tiles.s;
-  samp = tiles.samp;
-  script = tiles.script;
-  section = tiles.section;
-  select = tiles.select;
-  small = tiles.small;
-  span = tiles.span;
-  strong = tiles.strong;
-  style = tiles.style;
-  sub = tiles.sub;
-  summary = tiles.summary;
-  sup = tiles.sup;
-  table = tiles.table;
-  tbody = tiles.tbody;
-  td = tiles.td;
-  textarea = tiles.textarea;
-  tfoot = tiles.tfoot;
-  th = tiles.th;
-  thead = tiles.thead;
-  time = tiles.time;
-  title = tiles.title;
-  tr = tiles.tr;
-  u = tiles.u;
-  ul = tiles.ul;
+  a = squares.a;
+  abbr = squares.abbr;
+  address = squares.address;
+  article = squares.article;
+  aside = squares.aside;
+  audio = squares.audio;
+  b = squares.b;
+  bdi = squares.bdi;
+  bdo = squares.bdo;
+  big = squares.big;
+  blockquote = squares.blockquote;
+  body = squares.body;
+  button = squares.button;
+  canvas = squares.canvas;
+  caption = squares.caption;
+  cite = squares.cite;
+  code = squares.code;
+  colgroup = squares.colgroup;
+  data = squares.data;
+  datalist = squares.datalist;
+  dd = squares.dd;
+  del = squares.del;
+  details = squares.details;
+  dfn = squares.dfn;
+  div = squares.div;
+  dl = squares.dl;
+  dt = squares.dt;
+  em = squares.em;
+  fieldset = squares.fieldset;
+  figcaption = squares.figcaption;
+  figure = squares.figure;
+  footer = squares.footer;
+  form = squares.form;
+  h1 = squares.h1;
+  h2 = squares.h2;
+  h3 = squares.h3;
+  h4 = squares.h4;
+  h5 = squares.h5;
+  h6 = squares.h6;
+  head = squares.head;
+  header = squares.header;
+  html = squares.html;
+  i = squares.i;
+  iframe = squares.iframe;
+  ins = squares.ins;
+  kbd = squares.kbd;
+  label = squares.label;
+  legend = squares.legend;
+  li = squares.li;
+  main = squares.main;
+  map = squares.map;
+  mark = squares.mark;
+  menu = squares.menu;
+  menuitem = squares.menuitem;
+  meter = squares.meter;
+  nav = squares.nav;
+  noscript = squares.noscript;
+  object = squares.object;
+  ol = squares.ol;
+  optgroup = squares.optgroup;
+  option = squares.option;
+  output = squares.output;
+  p = squares.p;
+  pre = squares.pre;
+  progress = squares.progress;
+  q = squares.q;
+  rp = squares.rp;
+  rt = squares.rt;
+  ruby = squares.ruby;
+  s = squares.s;
+  samp = squares.samp;
+  script = squares.script;
+  section = squares.section;
+  select = squares.select;
+  small = squares.small;
+  span = squares.span;
+  strong = squares.strong;
+  style = squares.style;
+  sub = squares.sub;
+  summary = squares.summary;
+  sup = squares.sup;
+  table = squares.table;
+  tbody = squares.tbody;
+  td = squares.td;
+  textarea = squares.textarea;
+  tfoot = squares.tfoot;
+  th = squares.th;
+  thead = squares.thead;
+  time = squares.time;
+  title = squares.title;
+  tr = squares.tr;
+  u = squares.u;
+  ul = squares.ul;
   /**
    * we need to use varElement
    * because var is reserved keyword
    */
-  varElement = tiles.varElement;
-  video = tiles.video;
+  varibale = squares.variable;
+  video = squares.video;
 
   /** SVG ELEMENTS */
-  g = tiles.g;
-  svg = tiles.svg;
-  text = tiles.text;
+  g = squares.g;
+  svg = squares.svg;
+  text = squares.text;
 
   /** NOT PAIR ELEMENTS */
-  area = tiles.area;
-  base = tiles.base;
-  br = tiles.br;
-  col = tiles.col;
-  embed = tiles.embed;
-  hr = tiles.hr;
-  img = tiles.img;
-  input = tiles.input;
-  keygen = tiles.keygen;
-  link = tiles.link;
-  meta = tiles.meta;
-  param = tiles.param;
+  area = squares.area;
+  base = squares.base;
+  br = squares.br;
+  col = squares.col;
+  embed = squares.embed;
+  hr = squares.hr;
+  img = squares.img;
+  input = squares.input;
+  keygen = squares.keygen;
+  link = squares.link;
+  meta = squares.meta;
+  param = squares.param;
   /**
    * Command is not in react
    * param = registerDomComponent("param"; false);
    */
-  source = tiles.source;
-  track = tiles.track;
-  wbr = tiles.wbr;
+  source = squares.source;
+  track = squares.track;
+  wbr = squares.wbr;
 
   /** SVG NOT PAIR ELEMENTS */
-  circle = tiles.circle;
-  line = tiles.line;
-  path = tiles.path;
-  polyline = tiles.polyline;
-  rect = tiles.rect;
+  circle = squares.circle;
+  line = squares.line;
+  path = squares.path;
+  polyline = squares.polyline;
+  rect = squares.rect;
 
 
 }
@@ -294,7 +294,7 @@ initReact() {
    * we need to use varElement
    * because var is reserved keyword
    */
-  varElement = _ReactElementToTiles(react.variable);
+  varibale = _ReactElementToTiles(react.variable);
   video = _ReactElementToTiles(react.video);
 
   /** SVG ELEMENTS */

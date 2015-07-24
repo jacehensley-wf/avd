@@ -1,6 +1,6 @@
-library tiles_browser;
+library squares_browser;
 import 'dart:html' as html;
-import 'package:avd/tiles.dart';
+import 'package:squares/squares.dart';
 
 part 'src/browser/mount.dart';
 part 'src/browser/unmount.dart';

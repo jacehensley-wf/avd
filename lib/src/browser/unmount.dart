@@ -1,4 +1,4 @@
-part of tiles_browser;
+part of squares_browser;
 
 unmountComponent(html.Element mountRoot) {
   logger.fine("unmountComponent called");

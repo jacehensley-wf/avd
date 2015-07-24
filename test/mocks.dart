@@ -1,7 +1,7 @@
 library tiles_test_mocks;
 
 import 'package:mockito/mockito.dart';
-import 'package:tiles/tiles.dart';
+import 'package:squares/squares.dart';
 import 'dart:async';
 
 class ComponentMock extends Mock implements Component {}

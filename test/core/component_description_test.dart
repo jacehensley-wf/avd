@@ -1,7 +1,7 @@
 library tiles_compoenent_description_test;
 
 import 'package:test/test.dart';
-import 'package:tiles/tiles.dart';
+import 'package:squares/squares.dart';
 import '../mocks.dart';
 import 'package:mockito/mockito.dart';
 

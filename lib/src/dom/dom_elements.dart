@@ -1,4 +1,4 @@
-part of tiles;
+part of squares;
 
 /**
  * specialized registerComponent method, which by tagname and pair flag
@@ -80,6 +80,7 @@ ComponentDescriptionFactory a = _registerDomComponent("a"),
   del = _registerDomComponent("del"),
   details = _registerDomComponent("details"),
   dfn = _registerDomComponent("dfn"),
+  dialog = _registerDomComponent("dialog"),
   div = _registerDomComponent("div"),
   dl = _registerDomComponent("dl"),
   dt = _registerDomComponent("dt"),
@@ -119,6 +120,7 @@ ComponentDescriptionFactory a = _registerDomComponent("a"),
   option = _registerDomComponent("option"),
   output = _registerDomComponent("output"),
   p = _registerDomComponent("p"),
+  picture = _registerDomComponent("picture"),
   pre = _registerDomComponent("pre"),
   progress = _registerDomComponent("progress"),
   q = _registerDomComponent("q"),
@@ -150,16 +152,21 @@ ComponentDescriptionFactory a = _registerDomComponent("a"),
   u = _registerDomComponent("u"),
   ul = _registerDomComponent("ul"),
   /**
-   * we need to use varElement
+   * we need to use variable
    * because var is reserved keyword
    */
-  varElement = _registerDomComponent("var"),
+  variable = _registerDomComponent("var"),
   video = _registerDomComponent("video"),
 
   /** SVG ELEMENTS */
   g = _registerSvgComponent("g"),
+  defs = _registerSvgComponent("defs"),
+  linearGradient = _registerSvgComponent("linearGradient"),
+  pattern = _registerSvgComponent("pattern"),
+  radialGradient = _registerSvgComponent("radialGradient"),
   svg = _registerSvgComponent("svg"),
   text = _registerSvgComponent("text"),
+  tspan = _registerSvgComponent("tspan"),
 
   /** NOT PAIR ELEMENTS */
   area = _registerDomComponent("area", pair: false),
@@ -184,9 +191,12 @@ ComponentDescriptionFactory a = _registerDomComponent("a"),
 
   /** SVG NOT PAIR ELEMENTS */
   circle = _registerSvgComponent("circle", pair: false),
+  ellipse = _registerSvgComponent("ellipse", pair: false),
   line = _registerSvgComponent("line", pair: false),
   path = _registerSvgComponent("path", pair: false),
+  polygon = _registerSvgComponent("polygon", pair: false),
   polyline = _registerSvgComponent("polyline", pair: false),
-  rect = _registerSvgComponent("rect", pair: false);
+  rect = _registerSvgComponent("rect", pair: false),
+  stop = _registerSvgComponent("stop", pair: false);
 
 

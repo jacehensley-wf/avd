@@ -1,7 +1,7 @@
 part of utils;
 
-class Component extends tiles.Component implements  react.Component {
-  Component([props, children]): super(props, children), _needUpdateController = new StreamController(sync: true) {
+class Component extends squares.Component implements  react.Component {
+  Component([props, children]): super.withParams(props, children), _needUpdateController = new StreamController(sync: true) {
   }
 
   final StreamController _needUpdateController;
@@ -35,7 +35,7 @@ class Component extends tiles.Component implements  react.Component {
       _jsRedraw();
     } else {
       _needUpdateController.add(now);
-      tiles.updateAllVirtualDomTreesSync();
+      squares.updateAllVirtualDomTreesSync();
     }
   }
 
@@ -129,7 +129,7 @@ head, header, hr, html, i, iframe, img, input, ins, kbd, keygen, label, legend, 
 map, mark, menu, menuitem, meta, meter, nav, noscript, object, ol, optgroup, option, output,
 p, param, pre, progress, q, rp, rt, ruby, s, samp, script, section, select, small, source,
 span, strong, style, sub, summary, sup, table, tbody, td, textarea, tfoot, th, thead, time,
-title, tr, track, u, ul, varElement , video, wbr;
+title, tr, track, u, ul, varibale , video, wbr;
 
 /** SVG elements */
 var circle, g, line, path, polyline, rect, svg, text;

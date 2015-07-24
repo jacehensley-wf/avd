@@ -1,7 +1,7 @@
 library utils;
 
-import 'package:tiles/tiles_browser.dart' as tiles;
-import 'package:tiles/tiles.dart' as tiles;
+import 'package:squares/squares_browser.dart' as squares;
+import 'package:squares/squares.dart' as squares;
 import 'package:react/react.dart' as react;
 import 'package:react/react_client.dart' as react;
 import "dart:js";

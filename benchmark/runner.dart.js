@@ -10259,7 +10259,7 @@ var $$ = {};
   }, "call$0", "main2$closure", 0, 0, 154]
 },
 1],
-["tiles", "package:tiles/tiles.dart", , V, {
+["tiles", "package:tiles/squares.dart", , V, {
   "^": "",
   _updateChildren: [function(node, changes) {
     var oldChildren, oldChildrenPositions, nextChildren, t1, descriptions, t2, i, t3, key, description, oldChild, oldListeners, nextChild, t4, t5, subscription, child;
@@ -10740,7 +10740,7 @@ var $$ = {};
     $isFunction: true
   }
 }],
-["tiles_browser", "package:tiles/tiles_browser.dart", , Z, {
+["tiles_browser", "package:tiles/squares_browser.dart", , Z, {
   "^": "",
   _createEventsMapFromList: [function(events) {
     var eventsMap = H.fillLiteralMap([], P.LinkedHashMap_LinkedHashMap(null, null, null, null, null));

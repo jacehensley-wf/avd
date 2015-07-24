@@ -9,8 +9,8 @@
  */
 
 import 'dart:html';
-import 'package:tiles/tiles.dart';
-import 'package:tiles/tiles_browser.dart';
+import 'package:squares/squares.dart';
+import 'package:squares/squares_browser.dart';
 
 main() {
   initTilesBrowserConfiguration();

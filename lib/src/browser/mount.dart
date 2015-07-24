@@ -1,4 +1,4 @@
-part of tiles_browser;
+part of squares_browser;
 
 const _REF = "ref";
 const _VALUE = "value";
@@ -36,7 +36,7 @@ mountComponent(ComponentDescription description, html.HtmlElement mountRoot) {
   Node node = new Node.fromDescription(null, description);
 
   _rootNodes.add(node);
-  
+
   node.update();
 
   mountRoot.children.clear();

@@ -1,4 +1,4 @@
-part of tiles;
+part of squares;
 
 /**
  * Create enum of type of node change.

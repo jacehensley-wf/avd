@@ -1,4 +1,4 @@
-part of tiles;
+part of squares;
 
 /**
  * DomTextComponent represents text node in DOM. If there is string passed in children,

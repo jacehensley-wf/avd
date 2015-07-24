@@ -1,4 +1,4 @@
-part of tiles_browser;
+part of squares_browser;
 
 /**
  * Map used to listen event.target to Node instance.

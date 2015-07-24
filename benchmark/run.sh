@@ -7,7 +7,7 @@
 #                                                                      #
 ########################################################################
 
-. ./bin/functions.sh --source-only
+. ../bin/functions.sh --source-only
 
 JS=0;
 RUNCOUNT=5;

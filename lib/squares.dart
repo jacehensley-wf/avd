@@ -1,4 +1,4 @@
-library tiles;
+library squares;
 import 'dart:async';
 import 'package:logging/logging.dart';
 

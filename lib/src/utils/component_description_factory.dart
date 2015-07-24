@@ -1,4 +1,4 @@
-part of tiles;
+part of squares;
 
 /**
  * Define type for component factory (function which return new instance of Component with props)

@@ -1,4 +1,4 @@
-part of tiles;
+part of squares;
 
 class NodeChange {
   final NodeChangeType type;

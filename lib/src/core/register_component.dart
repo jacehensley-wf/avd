@@ -1,4 +1,4 @@
-part of tiles;/**
+part of squares;/**
  * Create component description factory from component factory,
  * which is function, which return component description and get props and children as parameters.
  *

@@ -1,5 +1,5 @@
-import 'package:avd/tiles_browser.dart';
-import 'package:avd/tiles.dart';
+import 'package:squares/squares.dart';
+import 'package:squares/squares_browser.dart';
 import 'dart:html';
 
 void main() {

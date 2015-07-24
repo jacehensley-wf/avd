@@ -1,8 +1,8 @@
 library tiles_browser_elements_test;
 
 import 'package:test/test.dart';
-import 'package:avd/tiles.dart';
-import 'package:avd/tiles_browser.dart';
+import 'package:squares/squares.dart';
+import 'package:squares/squares_browser.dart';
 import 'dart:html';
 
 main() {

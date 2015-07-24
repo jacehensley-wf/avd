@@ -1,4 +1,4 @@
-part of tiles_browser;
+part of squares_browser;
 
 /**
  * Flag that browser configuration was initialized,

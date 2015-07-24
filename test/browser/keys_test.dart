@@ -2,8 +2,8 @@ library tiles_browser_keys_test;
 
 import 'package:test/test.dart';
 import 'package:mockito/mockito.dart';
-import 'package:tiles/tiles.dart';
-import 'package:tiles/tiles_browser.dart';
+import 'package:squares/squares.dart';
+import 'package:squares/squares_browser.dart';
 import 'dart:html';
 import 'dart:async';
 import '../mocks.dart';

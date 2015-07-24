@@ -2,7 +2,7 @@ library tiles_node_update_children_test;
 
 import 'package:test/test.dart';
 import 'package:mockito/mockito.dart';
-import 'package:tiles/tiles.dart';
+import 'package:squares/squares.dart';
 import '../mocks.dart';
 
 

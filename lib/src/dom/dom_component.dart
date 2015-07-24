@@ -1,4 +1,4 @@
-part of tiles;
+part of squares;
 
 class DomComponent extends Component {
   final String tagName;

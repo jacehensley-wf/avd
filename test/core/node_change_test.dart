@@ -1,7 +1,7 @@
 library tiles_node_change_test;
 
 import 'package:test/test.dart';
-import 'package:tiles/tiles.dart';
+import 'package:squares/squares.dart';
 import '../mocks.dart';
 import 'dart:math';
 import 'package:mockito/mockito.dart';
