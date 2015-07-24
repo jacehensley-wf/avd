@@ -22,7 +22,7 @@ class DomComponent extends Component {
       pair, this.svg: false})
       : this._props = props,
         this.pair = pair == null || pair,
-        super(null, children) {
+        super.withParams(null, children) {
     if (_props != null &&
         !(_props is Map)) throw "Props should be map or string";
     if (_props == null) {

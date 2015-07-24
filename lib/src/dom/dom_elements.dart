@@ -14,7 +14,7 @@ ComponentDescriptionFactory _registerDomComponent(String tagname, {bool pair, bo
     /**
      * create default factory which create DomComponent
      */
-    factory = ({Map props, Iterable<ComponentDescription> children}) => new DomComponent(props: props, children: children, tagName: tagname, pair: pair, svg: svg);;
+    factory = ({Map props, Iterable<ComponentDescription> children}) => new DomComponent(props: props, children: children, tagName: tagname, pair: pair, svg: svg);
   }
 
   return registerComponent(factory);
@@ -36,6 +36,8 @@ _processChildren(dynamic children) {
         newChildren.add(child);
       } else if (child is String) {
         newChildren.add(_domTextComponentDescriptionFactory(props: child));
+      } else if (child is Iterable) {
+        newChildren.addAll(_processChildren(child));
       } else {
         throw "Children should contain only instance of ComponentDescription or String";
       }

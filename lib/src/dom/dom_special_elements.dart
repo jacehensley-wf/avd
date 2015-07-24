@@ -11,3 +11,7 @@ class TextareaComponent extends DomComponent {
 }
 
 ComponentFactory _textareaFactory = ({Map props, children}) => new TextareaComponent(props);
+
+class CustomComponent extends DomComponent {
+  CustomComponent(Map props): super(props: props);
+}

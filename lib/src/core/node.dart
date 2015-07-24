@@ -91,6 +91,16 @@ class Node {
        */
       _addChanges(new NodeChange(NodeChangeType.UPDATED, this, oldProps: _oldProps, newProps: this.component.props, oldListeners: oldListeners, newListeners: listeners), changes);
 
+      if (this.component.props is Map) {
+        Map newProps = new Map.from(this.component.props);
+        this.component.getDefaultProps().forEach((key, value) {
+          if (!newProps.containsKey(key)) {
+            newProps[key] = this.component.getDefaultProps()[key];
+          }
+        });
+        this.component.props = newProps;
+      }
+
       /**
        * update children and add node changes to result
        */

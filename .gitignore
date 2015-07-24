@@ -4,6 +4,13 @@ packages
 pubspec.lock
 .pub
 
+# IDEA project file ignores
+.idea/*
+!.idea/.name
+!.idea/misc.xml
+!.idea/modules.xml
+!.idea/vcs.xml
+
 ######################
 # testing suites
 ######################

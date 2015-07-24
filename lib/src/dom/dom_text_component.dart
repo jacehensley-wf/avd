@@ -6,7 +6,7 @@ part of tiles;
  */
 class DomTextComponent extends Component {
 
-  DomTextComponent(String props): super(props);
+  DomTextComponent(String props): super.withParams(props, null);
 
   /**
    * getter for escaped props to easy use for both,

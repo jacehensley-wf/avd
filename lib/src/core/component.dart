@@ -1,13 +1,13 @@
 part of tiles;
 
-class Component {
+abstract class Component {
 
   /**
    * props of component
    */
-  dynamic props;
+  dynamic props = {};
 
-  List<ComponentDescription> children;
+  List<ComponentDescription> children = [];
 
   /**
    * stream controller used to signalize to node,
@@ -27,8 +27,14 @@ class Component {
    *
    * If stream was not passed, it will create own stream controller
    */
-  Component(this.props, [this.children]):
+  Component.withParams(this.props, [this.children]):
     this._needUpdateController = new StreamController<bool>() {}
+
+  Component(): this._needUpdateController = new StreamController<bool>() {}
+
+
+//  Component():
+//    this._needUpdateController = new StreamController<bool>() {}
 
   didMount() {}
 
@@ -41,6 +47,8 @@ class Component {
   didUpdate() {}
 
   willUnmount() {}
+
+  Map getDefaultProps() => {};
 
   /**
    * redraw will add event to stream

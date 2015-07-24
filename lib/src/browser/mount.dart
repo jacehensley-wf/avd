@@ -36,7 +36,7 @@ mountComponent(ComponentDescription description, html.HtmlElement mountRoot) {
   Node node = new Node.fromDescription(null, description);
 
   _rootNodes.add(node);
-
+  
   node.update();
 
   mountRoot.children.clear();
@@ -242,6 +242,10 @@ _applyAttribute(html.Element element, String key, dynamic value) {
       return;
     }
   }
+  if (key == 'disabled' && (value == 'false' || value == false || value == null)) {
+    return;
+  }
+
   element.setAttribute(key, value.toString());
 }
 
