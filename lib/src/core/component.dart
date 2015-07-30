@@ -7,7 +7,27 @@ abstract class Component {
    */
   dynamic props = {};
 
+  Map state = {};
+
   List<ComponentDescription> children = [];
+
+  /**
+   * private _nextState and _prevState are usefull for methods shouldComponentUpdate,
+   * componentWillUpdate and componentDidUpdate.
+   *
+   * Use of theese private variables is implemented in react_client or react_server
+   */
+  Map _prevState = null;
+  Map _nextState = null;
+  /**
+   * nextState and prevState are just getters for previous private variables _prevState
+   * and _nextState
+   *
+   * if _nextState is null, then next state will be same as actual state,
+   * so return state as nextState
+   */
+  Map get prevState => _prevState;
+  Map get nextState => _nextState == null ? state : _nextState;
 
   /**
    * stream controller used to signalize to node,
@@ -36,19 +56,38 @@ abstract class Component {
 //  Component():
 //    this._needUpdateController = new StreamController<bool>() {}
 
-  didMount() {}
+  void willMount() {}
 
-  willReceiveProps(dynamic newProps) {}
+  void didMount([rootNode]) {}
 
-  shouldUpdate(dynamic newProps, dynamic oldProps) => true;
+  void willReceiveProps([newProps]) {}
+
+  bool shouldUpdate([nextProps, nextState]) => true;
+
+  void willUpdate([nextProps, nextState]) {}
+
+  void didUpdate([prevProps, prevState, rootNode]) {}
+
+  void willUnmount() {}
+
+  Map getDefaultProps() => {};
+
+  Map getInitialState() => {};
 
   List<ComponentDescription> render() => null;
 
-  didUpdate() {}
+  void setState(Map newState) {
+    if (newState != null) {
+      if (_nextState == null) {
+        _nextState = {};
+      }
+      _nextState.addAll(newState);
+    }
 
-  willUnmount() {}
+    redraw(true);
 
-  Map getDefaultProps() => {};
+    //render();
+  }
 
   /**
    * redraw will add event to stream

@@ -95,11 +95,22 @@ class Node {
         Map newProps = new Map.from(this.component.props);
         this.component.getDefaultProps().forEach((key, value) {
           if (!newProps.containsKey(key)) {
-            newProps[key] = this.component.getDefaultProps()[key];
+            newProps[key] = value;
           }
         });
+
         this.component.props = newProps;
       }
+
+      Map newState = new Map.from(this.component.nextState);
+
+      this.component.getInitialState().forEach((key, value) {
+        if(!newState.containsKey(key)) {
+          newState[key] = value;
+        }
+      });
+
+      this.component.state = newState;
 
       /**
        * update children and add node changes to result
