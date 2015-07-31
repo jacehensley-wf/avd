@@ -217,11 +217,6 @@ _applyAttribute(html.Element element, String key, dynamic value) {
     return;
   }
 
-  if (key == 'onClick') {
-    element.onClick.listen((event) => value(event));
-    return;
-  }
-
   key == 'className'
       ? element.className = value
       : element.setAttribute(key, value.toString());

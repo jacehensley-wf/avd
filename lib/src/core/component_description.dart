@@ -9,12 +9,17 @@ class ComponentDescription {
 
   dynamic key;
 
-  Map listeners;
+  Map get listeners {
+    if (props is! Map) {
+      return {};
+    }
+
+    return new Map.fromIterable(props.keys.where(_isEventListenerProp), value: (key) => props[key]);}
 
   /**
    * default constructor which only set final vars.
    */
-  ComponentDescription(ComponentFactory this.factory, {this.props, this.children, this.key, this.listeners});
+  ComponentDescription(ComponentFactory this.factory, {this.props, this.children, this.key});
 
   /**
    * creates component by factory with props.
@@ -27,6 +32,10 @@ class ComponentDescription {
     }
     this.children.addAll(_processChildren(c));
     return this;
+  }
+
+  _isEventListenerProp(key) {
+    return allowedListeners.contains(key);
   }
 
   dynamic noSuchMethod(Invocation i) {

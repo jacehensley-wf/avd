@@ -1,4 +1,4 @@
-library squares.core.restrictions;
+part of squares;
 
 /**
  * Returns boolean which is true
@@ -137,6 +137,108 @@ final Set<String> allowedSvgAttributes = new Set.from([
 ]);
 
 final Set<String> allowedAttrsPrefixes = new Set.from(["data-", "aria-"]);
+
+final Set<String> allowedListeners = new Set.from([
+  // Mouse Events
+  "onClick",
+  "onContextMenu",
+  "onDblClick",
+  "onMouseDown",
+  "onMouseEnter",
+  "onMouseLeave",
+  "onMouseMove",
+  "onMouseOver",
+  "onMouseOut",
+  "onMoudeUp",
+  // Keyboard Events
+  "onKeyDown",
+  "onKeyPress",
+  "onKeyUp",
+  // Frame/Object Events
+  "onAbort",
+  "onBeforeUnload",
+  "onError",
+  "onHashChange",
+  "onLoad",
+  "onPageShow",
+  "onPageHide",
+  "onResize",
+  "onScroll",
+  "onUnload",
+  // Form Events
+  "onBlur",
+  "onChange",
+  "onFocus",
+  "onFocusIn",
+  "onFocusOut",
+  "onInput",
+  "onInvalid",
+  "onReset",
+  "onSearch",
+  "onSelect",
+  "onSubmit",
+  // Drag events
+  "onDrag",
+  "onDragEnd",
+  "onDragLeave",
+  "onDragOver",
+  "onDragStart",
+  "onDrop",
+  // Clipboard Events
+  "onCopy",
+  "onCut",
+  "onPaste",
+  // Print Events
+  "onAfterPrint",
+  "onBeforePrint",
+  // Media Events
+  "onAbort",
+  "onCanPlay",
+  "onCanPlayThrough",
+  "onDurationChange",
+  "onEmptied",
+  "onEnded",
+  "onError",
+  "onLoadedData",
+  "onLoadedMetaData",
+  "onLoadStart",
+  "onPause",
+  "onPlay",
+  "onPlaying",
+  "onProgress",
+  "onRateChange",
+  "onSeeked",
+  "onSeeking",
+  "onStalled",
+  "onSuspend",
+  "onTimeUpdate",
+  "onVolumeChange",
+  "onWaiting",
+  // Animation Events
+  "animationEnd",
+  "animationIteration",
+  "animationStart",
+  // Transition Events
+  "transitionEnd",
+  // Server-Sent Events
+  "onError",
+  "onMessage",
+  "onOpen",
+  // Misc Events
+  "onMessage",
+  "onMouseWheel",
+  "onOnline",
+  "onPopState",
+  "onShow",
+  "onStorage",
+  "onToggle",
+  "onWheel",
+  // Touch Events
+  "onTouchCancel",
+  "onTouchEnd",
+  "onTouchMove",
+  "onTouchStart",
+]);
 
 const VALUE = "value";
 const DEFAULTVALUE = "defaultValue";

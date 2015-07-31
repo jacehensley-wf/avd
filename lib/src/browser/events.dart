@@ -26,7 +26,7 @@ getElementForComponent(Component component) {
  * define a type, which shoul every event listener
  * in props of DomComponent match.
  */
-typedef bool EventListener(Component component, html.Event event);
+typedef EventListener(Component component, html.Event event);
 
 /**
  * Process props key: value and if it is event listener,

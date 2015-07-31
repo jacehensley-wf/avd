@@ -1,8 +1,8 @@
 name: squares
-version: 0.1.4+1
-author: Jakuub Uhrik <jakuub@mail.com>
-description: The UI component library inspirated by Facebook React Javascript library.
-homepage: https://github.com/cleandart/tiles
+version: 0.2.0
+author: Workiva
+description: The UI component library inspirated by Facebook React Javascript library. Forked from cleandart/tiles.
+homepage: https://github.com/jacehensley-wf/squares
 dependencies:
   logging: '>=0.9.1+1 <0.10.0'
 dev_dependencies:
